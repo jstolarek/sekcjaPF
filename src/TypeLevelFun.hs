@@ -64,8 +64,8 @@ data SNat (a :: Nat) where
 -- parametru `a`, w związku z czym nazywamy go po prostu parametrem typu
 -- (ang. type paremeter)
 data List a where
-    Nil  ::      List a -- Nil  = []
-    Cons :: a -> List a -- Cons = :
+    Nil  ::                List a -- Nil  = []
+    Cons :: a -> List a -> List a -- Cons = :
 
 type family F (a :: Bool) :: * where
     F True  = Nat
