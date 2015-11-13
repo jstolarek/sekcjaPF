@@ -5,10 +5,8 @@ module Parser.Primitives (
   number, literal, token,
   iter, while, cons,
 
-  (<|>),
-  (>>>), (?>>>), (>>>=),
-  (<+>), (<-+>), (<+->), (<?+>), (<+?>),
-  (<=>)
+  (<|>), (<=>), (>>>), (?>>>), (>>>=),
+  (<+>), (<-+>), (<+->), (<?+>), (<+?>)
  ) where
 
 import Control.Monad
@@ -185,7 +183,7 @@ number = undefined
 -- kolejnej cyfry się nie powiedzie, zwracamy jako wynik dotychczas sparsowaną
 -- liczbę.
 number' :: Int -> Parser Int
-number' n = digit >>> buildNumber n >>>= number' <|> result n
+number' = undefined
 
 
 -- Pora zająć się parsowaniem podanych wyrazów.  Na początek stworzymy parser
@@ -254,5 +252,5 @@ infixl 6 <+?>
 
 
 -- Na koniec dobrze jest wysprzątać plik poprzez pogrupowanie funkcji w bloki
--- tematyczne.  Kombinatory najlepiej umieścić na końcu pliki, porządkujące je w
+-- tematyczne.  Kombinatory najlepiej umieścić na końcu pliku, porządkując je w
 -- kolejności wiązania (od najniższej do najwyższej).
