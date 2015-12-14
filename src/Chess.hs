@@ -1,3 +1,10 @@
+-- Ćwiczenie polega na implementacji gry w szachy dla dwóch graczy.  Cele
+-- ćwiczenia:
+--
+--   * ogólne poćwiczenie programowania w Haskellu
+--   * praktyczne wykorzystanie list comprehensions
+--   * motywujący przykład do użycia monady stanu
+--   * pretekst do zapoznania się z biblioteką haskeline
 module Chess where
 
 import Data.List
@@ -14,7 +21,7 @@ data Piece = King
 -- Kolory graczy
 data Colour = White | Black
 
--- Wyświetlanie bierek i koloró będzie nam potrzebne do stworzenia prostego
+-- Wyświetlanie bierek i kolorów będzie nam potrzebne do stworzenia prostego
 -- interfejsu użytkownika
 instance Show Piece where
     show King   = "K"
